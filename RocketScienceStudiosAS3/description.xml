@@ -35,5 +35,10 @@
 			<asDoc></asDoc>
 			<source></source>
 		</swc>
+		<swc>
+			<path>flash/libs/swfaddress_2_4.swc</path>
+			<asDoc></asDoc>
+			<source></source>
+		</swc>
 	</libraries>
 </tns:projectTemplate>
