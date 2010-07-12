@@ -1,0 +1,7 @@
+Checkout the project.
+Create a symlink in the ~/FDT/projectTypes/ folder to the rss.xml file.
+Create a symlink in the ~/FDT/projectTemplates/Web/ folder to the RocketScienceStudiosAS3 folder.
+(Re)start FDT and create a new project with these settings: http://grabs.epologee.com/db3359b77175a31adfd030570d99793f.png
+Add custom linked libraries.
+Run the *App.as as an FDT AS3 Application
+Done!
