@@ -5,23 +5,21 @@
 	<property name="project_name" value="Texter" />
 	<property name="project_name_lowercase" value="texter" />
 	
-	<target name="1. Create directories">
-		<available file="/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller" property="check.class.path.present" />
-		<!-- possible results: -->
-		<!-- check.preview.path.present = path does not exist (note the property will be undefined!) -->
-		<!-- true = path exists -->
-		<if>
-			<equals arg1="${check.class.path.present}" arg2="true" />
-			<then>
-				<fail message="Class path already present. Project already set up?" />
-			</then>
-			<else>
-				<mkdir dir="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller" />
-			</else>
-		</if>
-	</target>
+	<available file="/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller" property="check.class.path.present" />
+	<!-- possible results: -->
+	<!-- check.preview.path.present = path does not exist (note the property will be undefined!) -->
+	<!-- true = path exists -->
+	<if>
+		<equals arg1="${check.class.path.present}" arg2="true" />
+		<then>
+			<fail message="Class path already present. Project already set up?" />
+		</then>
+		<else>
+			<mkdir dir="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller" />
+		</else>
+	</if>
 	
-	<target name="2. Create App Classes" depends="1. Create directories">
+	<target name="Copy standard classes">
 		<tstamp />
 		<copy file="${basedir}/flash/launchers/templates/RSSVersion.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/RSSVersion.as" overwrite="true">
 			<filterchain>
@@ -31,7 +29,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>		
-		<copy file="${basedir}/flash/launchers/templates/App.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}App.as" overwrite="true">
+		<copy file="${basedir}/flash/launchers/templates/App.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}App.as" overwrite="false">
 			<filterchain>
 				<replacetokens>
 					<token key="project_name" value="${project_name}" />
@@ -39,7 +37,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>
-		<copy file="${basedir}/flash/launchers/templates/Factory.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Factory.as" overwrite="true">
+		<copy file="${basedir}/flash/launchers/templates/Factory.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Factory.as" overwrite="false">
 			<filterchain>
 				<replacetokens>
 					<token key="project_name" value="${project_name}" />
@@ -47,7 +45,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>
-		<copy file="${basedir}/flash/launchers/templates/Preloader.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Preloader.as" overwrite="true">
+		<copy file="${basedir}/flash/launchers/templates/Preloader.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Preloader.as" overwrite="false">
 			<filterchain>
 				<replacetokens>
 					<token key="project_name" value="${project_name}" />
@@ -55,7 +53,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>
-		<copy file="${basedir}/flash/launchers/templates/Facade.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Facade.as" overwrite="true">
+		<copy file="${basedir}/flash/launchers/templates/Facade.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Facade.as" overwrite="false">
 			<filterchain>
 				<replacetokens>
 					<token key="project_name" value="${project_name}" />
@@ -63,7 +61,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>
-		<copy file="${basedir}/flash/launchers/templates/StartUpCommand.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller/StartUpCommand.as" overwrite="true">
+		<copy file="${basedir}/flash/launchers/templates/StartUpCommand.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller/StartUpCommand.as" overwrite="false">
 			<filterchain>
 				<replacetokens>
 					<token key="project_name" value="${project_name}" />
@@ -71,7 +69,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>
-		<copy file="${basedir}/flash/launchers/templates/StartNavigationCommand.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller/StartNavigationCommand.as" overwrite="true">
+		<copy file="${basedir}/flash/launchers/templates/StartNavigationCommand.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller/StartNavigationCommand.as" overwrite="false">
 			<filterchain>
 				<replacetokens>
 					<token key="project_name" value="${project_name}" />
