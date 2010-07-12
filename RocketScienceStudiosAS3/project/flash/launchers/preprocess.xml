@@ -8,6 +8,10 @@
 					<comment value="//!" />
 				</striplinecomments>
 				<replacetokens>
+					<token key="project_title" value="App" />
+					<token key="project_swf" value="App.swf" />
+					<token key="google_analytics_account" value="..." />
+					<token key="google_analytics_prefix" value="/account" />
 					<token key="timecode" value="${DSTAMP}${TSTAMP}" />
 				</replacetokens>
 			</filterchain>
