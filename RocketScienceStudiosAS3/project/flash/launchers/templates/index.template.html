@@ -5,7 +5,7 @@
 		<meta name="robots" content="index, follow" />
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-		<title>ING Sail 2010</title>
+		<title>@project_title@</title>
 		
 		<link rel="icon" href="favicon.ico" type="image/ico" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/ico" />
@@ -20,8 +20,8 @@
 			SWFAddress.setTracker("dontTrack");
 	
 			var flashvars = {
-			 	ga_account: "UA-12008926-5",
-			 	ga_path: "/ing-sail"
+			 	ga_account: "@google_analytics_account@",
+			 	ga_path: "@google_analytics_prefix@"
 			};			 
 			
 			var params = {};
@@ -36,7 +36,7 @@
 //! This ensures that with each build, the swf is forced to reload in a browser.
 //!
 			// Flash Build version: @timecode@
-			swfobject.embedSWF("flash/swf/IngSailApp.swf?@timecode@", "flashcontent", "100%", "100%", "9.0.28.0", "flash/swf/expressinstall.swf", flashvars, params, attributes);
+			swfobject.embedSWF("flash/swf/@project_swf@?@timecode@", "flashcontent", "100%", "100%", "9.0.28.0", "flash/swf/expressinstall.swf", flashvars, params, attributes);
 		</script>
 		
 		<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
