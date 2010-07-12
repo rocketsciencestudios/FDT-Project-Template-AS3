@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta name="viewport" content="width=960" /> 	
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+		<title>ING Sail 2010</title>
+		
+		<link rel="icon" href="favicon.ico" type="image/ico" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/ico" />
+		<link rel="stylesheet" type="text/css" href="flash/css/index.css" />
+		
+		<script type="text/javascript" src="flash/js/swfobject.js"></script>
+		<script type="text/javascript" src="flash/js/swfaddress.js"></script> 
+		<script type="text/javascript">
+			function dontTrack() {
+			}
+		
+			SWFAddress.setTracker("dontTrack");
+	
+			var flashvars = {
+			 	ga_account: "UA-12008926-5",
+			 	ga_path: "/ing-sail"
+			};			 
+			
+			var params = {};
+			params.base = "flash/swf";
+			params.wmode = "opaque";
+			params.bgcolor = "#ffffff";
+			params.allowfullscreen = "true";			
+			
+			var attributes = {};	
+//!			
+//! The @timecode@ prop is replaced by an actual timecode at runtime.
+//! This ensures that with each build, the swf is forced to reload in a browser.
+//!
+			// Flash Build version: @timecode@
+			swfobject.embedSWF("flash/swf/IngSailApp.swf?@timecode@", "flashcontent", "100%", "100%", "9.0.28.0", "flash/swf/expressinstall.swf", flashvars, params, attributes);
+		</script>
+		
+		<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+		<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker(flashvars.ga_account);
+			pageTracker._trackPageview(flashvars.ga_path + "/html");
+		} catch(err) {}
+
+		</script>
+		
+	</head>
+	<body>
+		<div id="flashcontent">
+			<div id="container">
+				<div style="position: absolute; width: 901px; height: 610px; z-index: 1; top: 10px" id="laag1">
+					<img src="images/fallback_01.png" width="901" height="86" />
+					<p style="display: block; background: URL(images/fallback_02.png); width: 901px; height: 0; overflow: hidden; padding-top: 192px;">
+						Kapitein Johannes Jordaan is met zijn schip gestrand... op het Pirateneiland!
+						Kijk goed rond, dan weet je wat je te wachten staat op het echte ING Pirateneiland tijdens Sail 2010. Hier beleeft de kapitein samen met Numa en Azizi zijn avonturen.
+					</p>
+					<map name="FPMap0">
+						<area target="_blank" coords="80, 186, 218, 212" shape="rect" title="Download de route naar het Pirateneiland." href="http://sail.ing.nl/flash/downloads/ing_sail2010_route.pdf" />
+						<area target="_blank" coords="385, 157, 525, 182" shape="rect" title="Print het amulet voor een gratis piratenpakket tijdens Sail 2010!" href="http://sail.ing.nl/flash/downloads/ing_sail2010_amulet.pdf" />
+					</map>
+					<img src="images/fallback_03.png" width="901" height="273" usemap="#FPMap0" />
+					<div style="position: absolute; width: 331px; height: 24px; z-index: 1; left: 0px; top: 552px" id="laag2" class="link-list">
+						<a href="flash/downloads/ing_sail2010_actievoorwaarden.pdf" target="_blank"><img src="images/fallback_04.png" width="121" height="24"></a>
+						<a href="http://www.ing.nl/particulier/klantenservice/disclaimer.aspx" target="_blank"><img src="images/fallback_05.png" width="85" height="24"></a>
+						<a href="http://www.ing.nl/particulier/klantenservice/privacy-statement.aspx" target="_blank"><img src="images/fallback_06.png" width="125" height="24"></a>
+					</div>
+					<div style="position: absolute; width: 250px; height: 59px; z-index: 2; left: 651px; top: 552px" id="laag3" class="link-list right">
+						<a href="http://www.sail2010.nl" target="_blank"><img src="images/fallback_07.png" width="76" height="59"></a>
+						<a href="http://www.ing.nl" target="_blank"><img src="images/fallback_08.png" width="117" height="59"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
