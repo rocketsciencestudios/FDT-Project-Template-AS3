@@ -12,7 +12,7 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 	public class @project_name@Factory extends AbstractFactory {
 		public function @project_name@Factory() {
 			AbstractFactory.delay = 100;
-			super(new @project_name@Preloader(), "@project_name_lowercase@.@project_name@App", StageSettings.NO_SCALE_TOP_LEFT);
+			super(new @project_name@Preloader(), "nl.rocketsciencestudios.@project_name_lowercase@.@project_name@App", StageSettings.NO_SCALE_TOP_LEFT);
 		}
 		
 		override public function initialize() : void {
