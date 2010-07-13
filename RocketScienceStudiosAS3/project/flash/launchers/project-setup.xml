@@ -2,8 +2,8 @@
 <project name="Setup Project" basedir="../../" default="Copy standard classes">
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
 	
-	<property name="project_name" value="Texter" />
-	<property name="project_name_lowercase" value="texter" />
+	<property name="project_name" value="ProjectName" />
+	<property name="project_name_lowercase" value="projectname" />
 	
 	
 	<target name="Copy standard classes">

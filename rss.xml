@@ -25,6 +25,7 @@ It contains basic libraries according to the selected SDK and Flash Player versi
 	<compilerArguments passClasspath="true" passMainclass="true" passSwcs="true">
 		<argument>-target-player={playerVersion}</argument>
 		<argument>-library-path {flexSDK}/frameworks/locale/en_US</argument>
+		<argument>-default-background-color 0xFFFFFF</argument>
 		<argument>-default-size 950 600</argument>
 		<argument>-verbose-stacktraces=true</argument>
 		<argument>-define=ROCKETSCIENCESTUDIOS::DebugMode,true</argument>

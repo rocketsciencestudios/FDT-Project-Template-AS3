@@ -1,6 +1,6 @@
 package nl.rocketsciencestudios.@project_name_lowercase@ {
 	import nl.rocketsciencestudios.RSSVersion;
-	import nl.rocketsciencestudios.texter.controller.StartUpCommand;
+	import nl.rocketsciencestudios.@project_name_lowercase@.controller.StartUpCommand;
 
 	import com.epologee.navigator.integration.puremvc.NavigationProxy;
 	import com.epologee.navigator.integration.puremvc.debug.DebugMenuMediator;
