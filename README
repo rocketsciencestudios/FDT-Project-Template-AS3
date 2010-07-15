@@ -1,4 +1,4 @@
-1. Checkout the project.
+1. Clone the project.
 2. Create a symlink in the ~/FDT/projectTypes/ folder to the rss.xml file:
 
 	ln -s ./rss.xml ~/FDT/projectTypes/rss.xml
