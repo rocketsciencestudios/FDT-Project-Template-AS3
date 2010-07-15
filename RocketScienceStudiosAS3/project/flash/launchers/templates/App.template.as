@@ -13,7 +13,7 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 			super("Made by Rocket Science Studios", "http://rocketsciencestudios.nl", RSSVersion.HASH);
 		}
 		
-		override public function startApplication() : void {
+		override public function startApplication(inPreloaded : Array) : void {
 			_facade = new @project_name@Facade(MVC_MULTITON, this);
 			_facade.startUp();
 		}
