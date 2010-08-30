@@ -2,6 +2,7 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 	import nl.rocketsciencestudios.RSSVersion;
 
 	import com.epologee.application.AbstractFactory;
+	import com.epologee.application.preloader.PEByInterface;
 	import com.epologee.development.logging.LogInlet;
 	import com.epologee.development.logging.LogOutletSOSmax;
 	import com.epologee.development.logging.LogOutletTrazzle15;
@@ -11,7 +12,9 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 	
 	public class @project_name@Factory extends AbstractFactory {
 		public function @project_name@Factory() {
-			super(new @project_name@Preloader(), "nl.rocketsciencestudios.@project_name_lowercase@.@project_name@App", StageSettings.NO_SCALE_TOP_LEFT);
+			var peep : PEByInterface = new PEByInterface(new EnvironmentProxy(this));
+			
+			super(new @project_name@Preloader([peep]), "nl.rocketsciencestudios.@project_name_lowercase@.@project_name@App", StageSettings.NO_SCALE_TOP_LEFT);
 		}
 		
 		override public function initialize() : void {

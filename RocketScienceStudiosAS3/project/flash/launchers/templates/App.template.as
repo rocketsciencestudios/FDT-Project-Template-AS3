@@ -14,7 +14,7 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 		}
 		
 		override public function startApplication(inPreloaded : Array) : void {
-			_facade = new @project_name@Facade(MVC_MULTITON, this);
+			_facade = new @project_name@Facade(MVC_MULTITON, this, inPreloaded);
 			_facade.startUp();
 		}
 	}

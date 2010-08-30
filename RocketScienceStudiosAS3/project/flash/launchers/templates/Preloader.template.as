@@ -5,5 +5,9 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 		public function @project_name@Preloader() {
 			super();
 		}
+		
+		override protected function prepare() : void {
+			super.prepare();
+		}		
 	}
 }

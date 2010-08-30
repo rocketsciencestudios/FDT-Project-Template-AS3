@@ -2,6 +2,8 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 	import nl.rocketsciencestudios.RSSVersion;
 	import nl.rocketsciencestudios.@project_name_lowercase@.controller.StartUpCommand;
 
+	import com.epologee.application.preloader.AbstractPreloadElement;
+	import com.epologee.application.preloader.PEByInterface;
 	import com.epologee.navigator.integration.puremvc.NavigationProxy;
 	import com.epologee.navigator.integration.puremvc.debug.DebugMenuMediator;
 	import com.epologee.navigator.integration.puremvc.debug.DebugTransitionMediator;
@@ -15,14 +17,29 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 		public static const NAME : String = getQualifiedClassName(@project_name@Facade);
 		//
 		public static const START_UP : String = NAME + ":START_UP";
+		//
+		private var _preloaded : Array;
+		private var _container : Sprite;
 
-		public function @project_name@Facade(inMVCkey : String, inTimeline : Sprite) {
-			super(inTimeline, inMVCkey);
+		public function @project_name@Facade(inMVCkey : String, inTimeline : Sprite, inPreloaded:Array) {
+			_preloaded = inPreloaded;
+			_container = Sprite(inTimeline.addChild(new Sprite()));
+			super(_container, inMVCkey);
 		}
 
 		override protected function initializeModel() : void {
 			super.initializeModel();
-				
+
+			// register preloaded proxies
+			for each (var pe : AbstractPreloadElement in _preloaded) {
+				if (pe is PEByInterface) {
+					var proxy : Proxy = PEByInterface(pe).preloadable as Proxy;
+					if (proxy) {
+						registerProxy(proxy);
+					}
+				}
+			}
+							
 			registerProxy(new StageProxy(timeline));
 			registerProxy(new NavigationProxy(true));
 		}
