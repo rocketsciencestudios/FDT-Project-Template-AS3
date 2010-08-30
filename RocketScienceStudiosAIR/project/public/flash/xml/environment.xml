@@ -1,0 +1,10 @@
+<environment>
+	<group domain="localhost">
+		<value name="NAME">value 1</value>
+	</group>
+	<group domain="rss.dev">
+		<value name="NAME">value 2</value>
+	</group>
+
+	<value name="MADE_BY">http://www.rocketsciencestudios.com</value>
+</environment>

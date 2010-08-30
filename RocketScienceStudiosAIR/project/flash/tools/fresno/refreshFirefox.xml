@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build AS3 Project" default="Refresh Firefox with Fresno">
+	<target name="Refresh Firefox with Fresno">
+		<exec executable="open">
+			<arg line="-a Firefox" />
+		</exec>
+		<exec executable="./flash/tools/fresno/fresno">
+			<arg line="-j 'content.location.reload()'" />
+		</exec>
+	</target>
+</project>
