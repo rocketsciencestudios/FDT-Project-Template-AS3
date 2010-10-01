@@ -1,9 +1,9 @@
 package nl.rocketsciencestudios.@project_name_lowercase@.controller {
 	import nl.rocketsciencestudios.RSSVersion;
 
+	import com.epologee.navigator.NavigationState;
 	import com.epologee.navigator.integration.puremvc.NavigationProxy;
-	import com.epologee.navigator.states.NavigationState;
-
+	
 	import org.puremvc.as3.multicore.interfaces.INotification;
 	import org.puremvc.as3.multicore.patterns.command.SimpleCommand;
 

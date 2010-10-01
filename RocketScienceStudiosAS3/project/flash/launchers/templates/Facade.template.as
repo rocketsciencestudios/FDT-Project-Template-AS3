@@ -5,10 +5,11 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 	import com.epologee.application.preloader.AbstractPreloadElement;
 	import com.epologee.application.preloader.PEByInterface;
 	import com.epologee.navigator.integration.puremvc.NavigationProxy;
-	import com.epologee.navigator.integration.puremvc.debug.DebugMenuMediator;
 	import com.epologee.navigator.integration.puremvc.debug.DebugTransitionMediator;
 	import com.epologee.puremvc.facade.SimpleFacade;
 	import com.epologee.puremvc.stage.StageProxy;
+	
+	import org.puremvc.as3.multicore.patterns.proxy.Proxy;
 
 	import flash.display.Sprite;
 	import flash.utils.getQualifiedClassName;
@@ -55,7 +56,6 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 				
 			if (RSSVersion.DEBUG_MODE) {
 				registerMediator(new DebugTransitionMediator(createLayer(), "BR"));
-				registerMediator(new DebugMenuMediator(createLayer()));
 			}
 		}
 
