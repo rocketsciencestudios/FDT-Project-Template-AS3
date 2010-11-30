@@ -40,5 +40,10 @@
 			<asDoc></asDoc>
 			<source></source>
 		</swc>
+		<swc>
+			<path>flash/libs/logmeister.swc</path>
+			<asDoc></asDoc>
+			<source></source>
+		</swc>
 	</libraries>
 </tns:projectTemplate>
