@@ -1,11 +1,11 @@
 1. Clone the project.
 2. Create a symlink in the ~/FDT/projectTypes/ folder to the rss.xml file:
 
-	ln -s ./rss.xml ~/FDT/projectTypes/rss.xml
+	ln -s ./rss.xml ~/Library/Application\ Support/FDT/projectTypes/rss.xml
 	
-3. Create a symlink in the ~/FDT/projectTemplates/Web/ folder to the RocketScienceStudiosAS3 folder:
+3. Create a symlink in the ~/Library/Application Support/FDT/projectTemplates/Web/ folder to the RocketScienceStudiosAS3 folder:
 
-	ln -s ./RocketScienceStudiosAS3 ~/FDT/projectTemplates/Web/RocketScienceStudiosAS3
+	ln -s ./RocketScienceStudiosAS3 ~/Library/Application\ Support/FDT/projectTemplates/Web/RocketScienceStudiosAS3
 	
 4. (Re)start FDT and create a new project with these settings: http://grabs.epologee.com/db3359b77175a31adfd030570d99793f.png
 5. Add custom linked libraries

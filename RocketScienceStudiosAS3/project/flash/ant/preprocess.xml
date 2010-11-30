@@ -2,7 +2,7 @@
 <project name="Preprocess Code Templates" default="Update RSSVersion" basedir="../../">
 	<target name="Update RSSVersion">
 		<tstamp />
-		<copy file="${basedir}/flash/launchers/templates/index.template.html" tofile="${basedir}/public/index.html" overwrite="true">
+		<copy file="${basedir}/flash/ant/templates/index.template.html" tofile="${basedir}/public/index.html" overwrite="true">
 			<filterchain>
 				<striplinecomments>
 					<comment value="//!" />
@@ -16,7 +16,7 @@
 				</replacetokens>
 			</filterchain>
 		</copy>
-		<copy file="${basedir}/flash/launchers/templates/RSSVersion.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/RSSVersion.as" overwrite="true">
+		<copy file="${basedir}/flash/ant/templates/RSSVersion.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/RSSVersion.as" overwrite="true">
 			<filterchain>
 				<replacetokens>
 					<token key="time" value="${TSTAMP}" />
