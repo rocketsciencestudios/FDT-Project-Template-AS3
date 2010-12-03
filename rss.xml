@@ -30,5 +30,7 @@ It contains basic libraries according to the selected SDK and Flash Player versi
 		<argument>-default-size 950 600</argument>
 		<argument>-verbose-stacktraces=true</argument>
 		<argument>-define=ROCKETSCIENCESTUDIOS::DebugMode,true</argument>
+		<argument>-keep-as3-metadata+=Inject</argument>
+		<argument>-keep-as3-metadata+=PostConstruct</argument>
 	</compilerArguments>
 </tns:projectType>

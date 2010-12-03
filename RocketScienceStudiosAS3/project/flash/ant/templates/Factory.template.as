@@ -1,11 +1,11 @@
 package nl.rocketsciencestudios.@project_name_lowercase@ {
+	import logmeister.LogMeister;
+	import logmeister.connectors.TrazzleConnector;
+
 	import nl.rocketsciencestudios.RSSVersion;
 
 	import com.epologee.application.AbstractFactory;
 	import com.epologee.application.preloader.PEByInterface;
-	import com.epologee.development.logging.LogInlet;
-	import com.epologee.development.logging.LogOutletSOSmax;
-	import com.epologee.development.logging.LogOutletTrazzle15;
 	import com.epologee.puremvc.model.EnvironmentProxy;
 	import com.epologee.util.stage.StageSettings;
 
@@ -14,9 +14,7 @@ package nl.rocketsciencestudios.@project_name_lowercase@ {
 	public class @project_name@Factory extends AbstractFactory {
 		public function @project_name@Factory() {
 			if (RSSVersion.DEBUG_MODE) {
-				LogInlet.addLogger(new LogOutletSOSmax());
-				LogInlet.addLogger(new LogOutletTrazzle15(stage, "@project_name@ " + (Capabilities.isDebugger ? "D" : "R") + " " + Capabilities.version));
-				LogInlet.broadcastVersion(RSSVersion.HASH);
+				LogMeister.addLogger(new TrazzleConnector(stage, "Robot Navigator"));
 			}
 
 			var peep : PEByInterface = new PEByInterface(new EnvironmentProxy(this, RSSVersion.HASH));
