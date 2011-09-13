@@ -16,22 +16,12 @@
 			<source></source>
 		</swc>
 		<swc>
-			<path>flash/libs/puremvc-multicore-async.swc</path>
+			<path>flash/libs/greensock.swc</path>
 			<asDoc></asDoc>
 			<source></source>
 		</swc>
 		<swc>
-			<path>flash/libs/puremvc-multicore.swc</path>
-			<asDoc></asDoc>
-			<source></source>
-		</swc>
-		<swc>
-			<path>flash/libs/trazzlelib_1_5_1.swc</path>
-			<asDoc></asDoc>
-			<source></source>
-		</swc>
-		<swc>
-			<path>flash/libs/greensock_tweening_platform_v11.swc</path>
+			<path>flash/libs/robotlegs-signals-complete.swc</path>
 			<asDoc></asDoc>
 			<source></source>
 		</swc>

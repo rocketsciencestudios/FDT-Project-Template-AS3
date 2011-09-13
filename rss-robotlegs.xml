@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:projectType xmlns:tns="http://fdt.powerflasher.com/ProjectType"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://fdt.powerflasher.com/ProjectType projectType.xsd ">
+	<name>RSS</name>
+	<description>This project type defines a pure AS3 project for Flash Player. 
+It contains basic libraries according to the selected SDK and Flash Player version.</description>
+	<compatibleSdks>
+		<sdk min="3"/>
+	</compatibleSdks>
+	<swcs>
+		<swc>
+			<path>frameworks/libs/player/{playerVersion}/playerglobal.swc</path>
+		</swc>
+		<swc>
+			<path>frameworks/libs/flex.swc</path>
+		</swc>
+	</swcs>
+	<runtime>Flash Player</runtime>
+	<compatiblePlayers>
+		<player default="true">External SWF Viewer</player>
+		<player default="false">Browser</player>
+		<player default="false">Standalone Flash Player</player>
+	</compatiblePlayers>
+	<compilerArguments passClasspath="true" passMainclass="true" passSwcs="true">
+		<argument>-target-player={playerVersion}</argument>
+		<argument>-static-link-runtime-shared-libraries=true</argument>
+		<argument>-library-path+="{flexSDK}/frameworks/locale/en_US"</argument>
+		<argument>-default-background-color 0x333333</argument>
+		<argument>-default-size 950 600</argument>
+		<argument>-verbose-stacktraces=true</argument>
+		<argument>-define=ROCKETSCIENCESTUDIOS::DebugMode,true</argument>
+		<argument>-keep-as3-metadata+=Inject</argument>
+		<argument>-keep-as3-metadata+=PostConstruct</argument>
+	</compilerArguments>
+</tns:projectType>
