@@ -1,9 +1,9 @@
 1. Clone the project.
-2. Create a symlink in the ~/FDT/projectTypes/ folder to the rss.xml file:
+2. Create a symlink in the "~/Library/Application Support/FDT/projectTypes" folder to the rss.xml file:
 
 	ln -s ./rss.xml ~/Library/Application\ Support/FDT/projectTypes/rss.xml
 	
-3. Create a symlink in the ~/Library/Application Support/FDT/projectTemplates/Web/ folder to the RocketScienceStudiosAS3 folder:
+3. Create a symlink in the "~/Library/Application Support/FDT/projectTemplates/Web/" folder to the RocketScienceStudiosAS3 folder:
 
 	ln -s ./RocketScienceStudiosAS3 ~/Library/Application\ Support/FDT/projectTemplates/Web/RocketScienceStudiosAS3
 	

@@ -1,0 +1,12 @@
+<preload>
+
+	<LoaderMax name="preloader" load="true" auditSize="true">
+		<XMLLoader url="../xml/environment.xml" name="ENVIRONMENT" />
+		<XMLLoader url="../xml/text.xml" name="TEXT" />
+		<!-- 
+		Due to a bug in the NetStream class, the VideoLoader will *always* use the swf location as the origin for relative paths. 
+		<VideoLoader url="intro.flv" name="INTRO_TRANSITION" bufferMode="false" autoPlay="false" estimatedBytes="1200000" />
+		 -->
+	</LoaderMax>
+
+</preload>

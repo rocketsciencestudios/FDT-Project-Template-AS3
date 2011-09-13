@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Setup Project" basedir="../../" default="Copy standard classes">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+	
+	<property name="project_name" value="..." />
+	<property name="project_name_lowercase" value="..." />
+	
+	
+	<target name="Copy standard classes">
+		<tstamp />
+		<available file="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}" property="check.class.path.present" />
+		<!-- possible results: -->
+		<!-- check.preview.path.present = path does not exist (note the property will be undefined!) -->
+		<!-- true = path exists -->
+		<if>
+			<equals arg1="${check.class.path.present}" arg2="true" />
+			<then>
+				<echo message="Class path already present. Project already set up?" />
+			</then>
+			<else>
+				<!-- Continue with the setup -->
+				<mkdir dir="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/model" />
+				<mkdir dir="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/view" />
+				<mkdir dir="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/controller" />
+
+				<copy file="${basedir}/flash/ant/templates/RSSVersion.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/RSSVersion.as" overwrite="true">
+					<filterchain>
+						<replacetokens>
+							<token key="time" value="${TSTAMP}" />
+							<token key="date" value="${DSTAMP}" />
+						</replacetokens>
+					</filterchain>
+				</copy>		
+				<copy file="${basedir}/flash/ant/templates/App.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}App.as" overwrite="false">
+					<filterchain>
+						<replacetokens>
+							<token key="project_name" value="${project_name}" />
+							<token key="project_name_lowercase" value="${project_name_lowercase}" />
+						</replacetokens>
+					</filterchain>
+				</copy>
+				<copy file="${basedir}/flash/ant/templates/Factory.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Factory.as" overwrite="false">
+					<filterchain>
+						<replacetokens>
+							<token key="project_name" value="${project_name}" />
+							<token key="project_name_lowercase" value="${project_name_lowercase}" />
+						</replacetokens>
+					</filterchain>
+				</copy>
+				<copy file="${basedir}/flash/ant/templates/Preloader.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Preloader.as" overwrite="false">
+					<filterchain>
+						<replacetokens>
+							<token key="project_name" value="${project_name}" />
+							<token key="project_name_lowercase" value="${project_name_lowercase}" />
+						</replacetokens>
+					</filterchain>
+				</copy>
+				<copy file="${basedir}/flash/ant/templates/Context.template.as" tofile="${basedir}/flash/classes/nl/rocketsciencestudios/${project_name_lowercase}/${project_name}Context.as" overwrite="false">
+					<filterchain>
+						<replacetokens>
+							<token key="project_name" value="${project_name}" />
+							<token key="project_name_lowercase" value="${project_name_lowercase}" />
+						</replacetokens>
+					</filterchain>
+				</copy>
+			</else>
+		</if>
+	</target>
+</project>

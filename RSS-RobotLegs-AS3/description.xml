@@ -2,7 +2,7 @@
 <tns:projectTemplate xmlns:tns="http://fdt.powerflasher.com/ProjectTemplate"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://fdt.powerflasher.com/ProjectTemplate ../../projectTemplate.xsd">
-	<name>RSS PureMVC Template</name>
+	<name>RSS RobotLegs Template</name>
 	<description>Template for Rocket Science Studios projects</description>
 	<projectType>RSS</projectType>
 	<folders>
