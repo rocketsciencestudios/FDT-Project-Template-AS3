@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:projectType xmlns:tns="http://fdt.powerflasher.com/ProjectType"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://fdt.powerflasher.com/ProjectType projectType.xsd ">
+	<name>RSS</name>
+	<version>2.5</version>	
+	<description>Create a SWF application targeting the web.</description>
+	<compatibleSdks>
+		<sdk name='flex4' min="4.5" max="4.9" default="true"/>	
+		<sdk name='flex3' min="3.6" max="3.9"/>	
+	</compatibleSdks>
+	<swcs>
+		<swc sdkKinds="flex3, flex4">
+			<path>frameworks/libs/player/{playerVersion}/playerglobal.swc</path>
+		</swc>
+		<swc sdkKinds="flex3">
+			<path>frameworks/libs/flex.swc</path>
+		</swc>
+		<swc sdkKinds="flex3">
+			<path>frameworks/libs/utilities.swc</path>
+		</swc>
+		<swc sdkKinds="flex4">
+			<path>frameworks/libs/textLayout.swc</path>
+		</swc>
+		<swc sdkKinds="flex4">
+			<path>frameworks/libs/osmf.swc</path>
+		</swc>
+		<swc sdkKinds="flex4">
+			<path>frameworks/libs/authoringsupport.swc</path>
+		</swc>
+		<swc sdkKinds="flex4">
+			<path>frameworks/libs/core.swc</path>
+		</swc>
+	</swcs>
+	<runtime>Flash Player</runtime>
+	<compatiblePlayers>
+		<player default="true">External SWF Viewer</player>
+		<player default="false">Browser</player>
+		<player default="false">Standalone Flash Player</player>
+	</compatiblePlayers>
+	<compilerArguments passClasspath="true" passMainclass="true" passSwcs="true" passRsls="false">
+		<argument>-static-link-runtime-shared-libraries=true</argument>
+		<argument>-target-player={playerVersion}</argument>
+		<argument>-library-path+="{flexSDK}/frameworks/locale/en_US"</argument>
+		<argument>-default-background-color 0x999999</argument>
+		<argument>-default-size=950,550</argument>
+		<argument>-verbose-stacktraces=true</argument>
+		<argument>-define=ROCKETSCIENCESTUDIOS::DebugMode,true</argument>
+		<argument>-keep-as3-metadata+=Inject</argument>
+		<argument>-keep-as3-metadata+=PostConstruct</argument>
+	</compilerArguments>
+</tns:projectType>

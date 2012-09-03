@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:projectTemplate xmlns:tns="http://fdt.powerflasher.com/ProjectTemplate"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://fdt.powerflasher.com/ProjectTemplate ../../projectTemplate.xsd">
+	<name>RSS RobotLegs Template</name>
+	<version>2.5</version>
+	<description>Template for Rocket Science Studios projects</description>
+	<projectType>RSS</projectType>
+	<variables>
+		<primaryGroup label="">
+			<group label="Application Setup">
+				<variable name="appId" label="Project Class prefix:" default="ProjectName" type="string" />
+				<variable name="packageName" label="Project package name:" default="nl.rocketsciencestudios.projectname" type="string" />						
+			</group>
+			<group label="Project Setup">
+				<variable name="selectedSDK" label="Default SDK" default="_highest" type="sdk(3.6,4.9,1.5,4)" />									
+			</group>
+		</primaryGroup>				
+	</variables>
+	<expressions>
+		<expression name="missingSDKWarning">This template requires the Flex 3.6 SDK or later.</expression>
+		<expression name="hasMinimumSDK" value="sdkVersionExists('3.6','4.9')"/>
+		<expression name="templateError" value="if(!${hasMinimumSDK},${missingSDKWarning},'')"/>				
+		<expression name="projectType" value="'Web'" />
+		<expression name="targetPlatform" value="'Web'" />
+		<expression name="preferredSdk" value="${selectedSDK}"/>
+		<expression name="packageStructure" value="replaceRegex(${packageName}, '([.]+)', '/')" />			
+		<expression name="sourceFolder" value="'flash/classes'" />		
+		<expression name="outputFolder" value="'public/flash/swf'" />				
+		<expression name="autoLibFolder" value="'flash/libs'" />				
+	</expressions>
+	<folders>
+		<sourceFolder>${sourceFolder}</sourceFolder>
+		<outputFolder>${outputFolder}</outputFolder>
+		<autoLibFolder>${autoLibFolder}</autoLibFolder>
+	</folders>
+	<linkedResources>
+  		<linkedFolder>
+			<path>navigator_as3</path>
+			<location>navigator_as3</location>
+  		</linkedFolder>
+  		<linkedFolder>
+			<path>nebula</path>
+			<location>nebula</location>
+  		</linkedFolder>
+  		<linkedFolder>
+			<path>reusabilitee</path>
+			<location>reusabilitee</location>
+  		</linkedFolder>
+	</linkedResources>
+	<contentCreation processFileExtensions="mxml,xml,launch,properties,as,html">
+		<!-- Always -->
+		<file src="template-classes/App.as" dest="${sourceFolder}/${packageStructure}/${appId}App.as" />
+		<file src="template-classes/Context.as" dest="${sourceFolder}/${packageStructure}/${appId}Context.as" />
+		<file src="template-classes/Factory.as" dest="${sourceFolder}/${packageStructure}/${appId}Factory.as" />
+		<file src="template-classes/Preloader.as" dest="${sourceFolder}/${packageStructure}/${appId}Preloader.as" />
+		<file src="template-classes/RSSVersion.as" dest="${sourceFolder}/nl/rocketsciencestudios/RSSVersion.as" />
+		
+		<folder src="flash" dest="flash" recursive="true"/>
+		<folder src="public" dest="public" recursive="true"/>
+	</contentCreation>
+</tns:projectTemplate>
