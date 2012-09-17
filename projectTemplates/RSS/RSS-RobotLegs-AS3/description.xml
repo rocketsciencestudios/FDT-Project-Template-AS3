@@ -50,11 +50,20 @@
 	</linkedResources>
 	<contentCreation processFileExtensions="mxml,xml,launch,properties,as,html">
 		<!-- Always -->
-		<file src="template-classes/App.as" dest="${sourceFolder}/${packageStructure}/${appId}App.as" />
-		<file src="template-classes/Context.as" dest="${sourceFolder}/${packageStructure}/${appId}Context.as" />
-		<file src="template-classes/Factory.as" dest="${sourceFolder}/${packageStructure}/${appId}Factory.as" />
-		<file src="template-classes/Preloader.as" dest="${sourceFolder}/${packageStructure}/${appId}Preloader.as" />
-		<file src="template-classes/RSSVersion.as" dest="${sourceFolder}/nl/rocketsciencestudios/RSSVersion.as" />
+		<file src="templates/preprocess.xml" dest="flash/ant/preprocess.xml" />
+		<file src="templates/App.as" dest="${sourceFolder}/${packageStructure}/${appId}App.as" />
+		<file src="templates/Context.as" dest="${sourceFolder}/${packageStructure}/${appId}Context.as" />
+		<file src="templates/Factory.as" dest="${sourceFolder}/${packageStructure}/${appId}Factory.as" />
+		<file src="templates/Preloader.as" dest="${sourceFolder}/${packageStructure}/${appId}Preloader.as" />
+		<file src="templates/RSSVersion.as" dest="${sourceFolder}/nl/rocketsciencestudios/RSSVersion.as" />
+		<file src="templates/view/HomeMediator.as" dest="${sourceFolder}/${packageStructure}/view/HomeMediator.as" />
+		<file src="templates/view/HomeView.as" dest="${sourceFolder}/${packageStructure}/view/HomeView.as" />
+		<file src="templates/model/constants/States.as" dest="${sourceFolder}/${packageStructure}/model/constants/States.as" />
+		<file src="templates/model/constants/Segments.as" dest="${sourceFolder}/${packageStructure}/model/constants/Segments.as" />
+		<file src="templates/model/constants/EnvironmentNames.as" dest="${sourceFolder}/${packageStructure}/model/constants/EnvironmentNames.as" />
+		<file src="templates/model/constants/TextIDs.as" dest="${sourceFolder}/${packageStructure}/model/constants/TextIDs.as" />
+		<file src="templates/model/constants/Colors.as" dest="${sourceFolder}/${packageStructure}/model/constants/Colors.as" />
+		<file src="templates/model/constants/Sizes.as" dest="${sourceFolder}/${packageStructure}/model/constants/Sizes.as" />
 		
 		<folder src="flash" dest="flash" recursive="true"/>
 		<folder src="public" dest="public" recursive="true"/>

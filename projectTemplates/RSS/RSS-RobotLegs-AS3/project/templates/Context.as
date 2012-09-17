@@ -1,5 +1,8 @@
 package ${packageName} {
 	import nl.rocketsciencestudios.RSSVersion;
+	import ${packageName}.model.constants.States;
+	import ${packageName}.view.HomeView;
+	import ${packageName}.view.HomeMediator;
 
 	import rss.nebula.robotlegs.environment.EnvironmentModel;
 	import rss.nebula.text.TextSource;
@@ -33,6 +36,8 @@ package ${packageName} {
 		}
 
 		private function initializeView() : void {
+			stateViewMap.mapViewMediator(States.HOME, HomeView, HomeMediator);
+			
 			if (RSSVersion.DEBUG_MODE) {
 				stateViewMap.mapView("/", DebugConsole, navigator, "TR");
 			}
@@ -40,7 +45,7 @@ package ${packageName} {
 
 		private function startNavigation() : void {
 			if (RSSVersion.DEBUG_MODE) {
-				navigator.start("/", "/home/");
+				navigator.start("/", States.HOME);
 				return;
 			}
 			
